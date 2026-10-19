@@ -1,0 +1,64 @@
+const people = {
+  griffin: { name: 'Griffin' },
+  sam: { name: 'Sam' },
+  josh: { name: 'Josh' },
+  stephen: { name: 'Stephen' },
+  hawkin: { name: 'Hawkin' },
+  gage: { name: 'Gage' },
+  ian: { name: 'Ian' },
+  quinn: { name: 'Quinn' },
+  morgan: { name: 'Morgan' },
+};
+
+const categories = [
+  {
+    id: 'most-athletic',
+    name: 'Most Athletic',
+    blurb: 'Fastest, strongest, most likely to pull something.',
+    nominees: ['griffin', 'sam', 'josh', 'stephen'],
+  },
+  {
+    id: 'best-entrance',
+    name: 'Best Entrance',
+    blurb: 'Walks in like the room was waiting for them.',
+    nominees: ['sam', 'hawkin', 'gage', 'griffin'],
+  },
+  {
+    id: 'most-like-marlon',
+    name: 'Most Like Marlon',
+    blurb: 'You know exactly what we mean.',
+    nominees: ['sam', 'josh', 'gage', 'ian', 'stephen'],
+  },
+  {
+    id: 'most-reels-scrolled',
+    name: 'Most Reels Scrolled',
+    blurb: 'Thumb never stops. Screen time is a lifestyle.',
+    nominees: ['quinn', 'sam', 'griffin', 'stephen'],
+  },
+  {
+    id: 'best-gamer',
+    name: 'Best Gamer',
+    blurb: 'Clutch plays and controller-throwing energy.',
+    nominees: ['gage', 'hawkin', 'griffin', 'sam', 'morgan'],
+  },
+  {
+    id: 'driver-of-the-year',
+    name: 'Driver of the Year',
+    blurb: 'Who do you actually trust behind the wheel?',
+    nominees: ['hawkin', 'gage', 'griffin', 'josh', 'stephen'],
+  },
+  {
+    id: 'goat-of-the-year',
+    name: 'GOAT of the Year',
+    blurb: 'The greatest of all time. This year, anyway.',
+    nominees: ['sam', 'gage', 'ian', 'griffin', 'hawkin'],
+  },
+  {
+    id: 'rabbit-rabbi-of-the-year',
+    name: 'Rabbit Rabbi of the Year',
+    blurb: 'The big one. The one everyone came for.',
+    nominees: ['gage', 'griffin', 'ian'],
+  },
+];
+
+module.exports = { people, categories };
