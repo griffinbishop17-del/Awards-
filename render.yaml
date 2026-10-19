@@ -4,7 +4,7 @@ services:
     name: rabbit-rabbi-awards
     runtime: node
     plan: free
-    buildCommand: npm ci --omit=dev
+    buildCommand: npm install --omit=dev
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:

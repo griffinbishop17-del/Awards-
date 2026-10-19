@@ -1,0 +1,80 @@
+/**
+ * Rabbit Rabbi Awards — categories and nominees.
+ *
+ * This is the ONE place to edit categories and nominees.
+ *
+ * - `people` lists every nominee once. The key is a stable id (lowercase,
+ *   no spaces). Add `image: "/img/nominees/<file>"` to give someone a photo, or
+ *   simply drop `<id>.jpg|.jpeg|.png|.webp` into public/img/nominees/ and it is
+ *   picked up automatically on the next server start.
+ * - `categories` lists each award and the people nominated for it, in the
+ *   order they should be displayed. Categories may have any number of nominees (2+).
+ *
+ * IMPORTANT: once voting has started, do not change category ids or person ids.
+ * Votes are stored by id. Display names can be changed at any time.
+ */
+
+const people = {
+  griffin: { name: 'Griffin' },
+  sam: { name: 'Sam' },
+  josh: { name: 'Josh' },
+  stephen: { name: 'Stephen' },
+  hawkin: { name: 'Hawkin' },
+  gage: { name: 'Gage' },
+  ian: { name: 'Ian' },
+  quinn: { name: 'Quinn' },
+  morgan: { name: 'Morgan' },
+};
+
+const categories = [
+  {
+    id: 'most-athletic',
+    name: 'Most Athletic',
+    blurb: 'Fastest, strongest, most likely to pull something.',
+    nominees: ['griffin', 'sam', 'josh', 'stephen'],
+  },
+  {
+    id: 'best-entrance',
+    name: 'Best Entrance',
+    blurb: 'Walks in like the room was waiting for them.',
+    nominees: ['sam', 'hawkin', 'gage', 'griffin'],
+  },
+  {
+    id: 'most-like-marlon',
+    name: 'Most Like Marlon',
+    blurb: 'You know exactly what we mean.',
+    nominees: ['sam', 'josh', 'gage', 'ian', 'stephen'],
+  },
+  {
+    id: 'most-reels-scrolled',
+    name: 'Most Reels Scrolled',
+    blurb: 'Thumb never stops. Screen time is a lifestyle.',
+    nominees: ['quinn', 'sam', 'griffin', 'stephen'],
+  },
+  {
+    id: 'best-gamer',
+    name: 'Best Gamer',
+    blurb: 'Clutch plays and controller-throwing energy.',
+    nominees: ['gage', 'hawkin', 'griffin', 'sam', 'morgan'],
+  },
+  {
+    id: 'driver-of-the-year',
+    name: 'Driver of the Year',
+    blurb: 'Who do you actually trust behind the wheel?',
+    nominees: ['hawkin', 'gage', 'griffin', 'josh', 'stephen'],
+  },
+  {
+    id: 'goat-of-the-year',
+    name: 'GOAT of the Year',
+    blurb: 'The greatest of all time. This year, anyway.',
+    nominees: ['sam', 'gage', 'ian', 'griffin', 'hawkin'],
+  },
+  {
+    id: 'rabbit-rabbi-of-the-year',
+    name: 'Rabbit Rabbi of the Year',
+    blurb: 'The big one. The one everyone came for.',
+    nominees: ['gage', 'griffin', 'ian'],
+  },
+];
+
+module.exports = { people, categories };

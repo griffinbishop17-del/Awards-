@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin sign-in — Rabbit Rabbi Awards</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin">
+  <main class="login-wrap">
+    <form class="login-card" id="login-form" novalidate>
+      <img src="/img/logo.svg" alt="" width="64" height="75">
+      <h1>Admin sign-in</h1>
+      <p class="sub">Rabbit Rabbi Awards control room</p>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+      </div>
+      <div class="alert" id="login-error" role="alert" hidden></div>
+      <button class="btn btn-primary" type="submit" id="login-btn"><span id="login-label">Sign in</span></button>
+      <a class="back-link" href="/">← Back to the awards</a>
+    </form>
+  </main>
+  <script src="/js/admin-login.js" defer></script>
+</body>
+</html>

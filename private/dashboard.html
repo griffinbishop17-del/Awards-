@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dashboard — Rabbit Rabbi Awards</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin">
+  <header class="dash-top">
+    <div class="wrap">
+      <span class="brand"><img src="/img/logo.svg" alt="" width="34" height="40"><span>Rabbit Rabbi Awards</span><span class="tag">ADMIN</span></span>
+      <button class="btn btn-sm" type="button" id="logout">Sign out</button>
+    </div>
+  </header>
+
+  <main class="dash wrap" id="main">
+    <h1>Control room</h1>
+
+    <section aria-labelledby="voting-h" class="control-card" id="control">
+      <div>
+        <h2 id="voting-h" class="sr-only">Voting status</h2>
+        <div class="state"><span class="light" aria-hidden="true"></span><strong id="state-text" role="status">Loading…</strong></div>
+        <div class="state-meta" id="state-meta"></div>
+      </div>
+      <button class="btn btn-primary btn-lg" type="button" id="toggle-voting" disabled>…</button>
+    </section>
+
+    <div class="banner error" id="banner" role="alert" hidden></div>
+
+    <div class="stats">
+      <div class="stat"><small>Valid ballots</small><strong id="total">–</strong></div>
+      <div class="stat wide"><small>Results last updated</small><strong id="updated">–</strong></div>
+      <div class="stat"><small>Categories</small><strong id="cat-count">–</strong></div>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn btn-sm" type="button" id="refresh">Refresh results</button>
+      <a class="btn btn-sm" href="/api/admin/results.csv" id="csv" download>Export CSV</a>
+      <span class="grow"></span>
+      <label class="toggle"><input type="checkbox" id="auto"> Auto-refresh every 15s</label>
+    </div>
+
+    <div id="results" class="results" aria-live="polite"></div>
+  </main>
+
+  <dialog id="confirm" aria-labelledby="confirm-title">
+    <div class="dlg-inner">
+      <h2 id="confirm-title">Are you sure?</h2>
+      <p id="confirm-text"></p>
+      <div class="alert" id="confirm-error" role="alert" hidden></div>
+      <div class="dlg-actions">
+        <button class="btn" type="button" id="confirm-cancel">Cancel</button>
+        <button class="btn btn-primary" type="button" id="confirm-ok">Confirm</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/admin/dashboard.js" defer></script>
+</body>
+</html>
