@@ -1,0 +1,18 @@
+# Render Blueprint: free web service. You supply the two secrets when prompted.
+services:
+  - type: web
+    name: rabbit-rabbi-awards
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TRUST_PROXY
+        value: "1"
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_PASSWORD_HASH
+        sync: false

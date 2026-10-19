@@ -1,0 +1,28 @@
+{
+  "name": "rabbit-rabbi-awards",
+  "version": "1.0.0",
+  "description": "Rabbit Rabbi Awards voting site",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "node --test test/app.test.js",
+    "start": "node server/index.js",
+    "hash": "node scripts/hash-password.js",
+    "backup": "node scripts/backup.js",
+    "restore": "node scripts/restore.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "^5.3.0",
+    "@fontsource/unbounded": "^5.3.0",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "pg": "^8.23.1"
+  }
+}
