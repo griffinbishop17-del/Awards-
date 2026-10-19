@@ -31,7 +31,7 @@ const categories = [
     id: 'most-athletic',
     name: 'Most Athletic',
     blurb: 'Fastest, strongest, most likely to pull something.',
-    nominees: ['griffin', 'sam', 'josh', 'stephen'],
+    nominees: ['griffin', 'sam', 'josh', 'stephen', 'hawkin'],
   },
   {
     id: 'best-entrance',
@@ -43,13 +43,13 @@ const categories = [
     id: 'most-like-marlon',
     name: 'Most Like Marlon',
     blurb: 'You know exactly what we mean.',
-    nominees: ['sam', 'josh', 'gage', 'ian', 'stephen'],
+    nominees: ['sam', 'josh', 'gage', 'ian', 'stephen', 'hawkin'],
   },
   {
     id: 'most-reels-scrolled',
     name: 'Most Reels Scrolled',
     blurb: 'Thumb never stops. Screen time is a lifestyle.',
-    nominees: ['quinn', 'sam', 'griffin', 'stephen'],
+    nominees: ['quinn', 'sam', 'griffin', 'stephen', 'hawkin', 'morgan'],
   },
   {
     id: 'best-gamer',
