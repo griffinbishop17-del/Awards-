@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rabbit Rabbi Awards — Cast Your Vote</title>
+  <meta name="description" content="The Rabbit Rabbi Awards. Eight categories, one crown. Cast your vote.">
+  <meta name="theme-color" content="#09070f">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/unbounded-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#ballot">Skip to the ballot</a>
+
+  <header class="hero" id="top">
+    <div class="topbar">
+      <div class="wrap">
+        <a class="brand" href="#top"><img src="/img/logo.svg" alt="" width="34" height="40"><span>Rabbit Rabbi Awards</span></a>
+      </div>
+    </div>
+    <span class="beam l" aria-hidden="true"></span>
+    <span class="beam r" aria-hidden="true"></span>
+    <span class="sparkle" aria-hidden="true"></span><span class="sparkle" aria-hidden="true"></span>
+    <span class="sparkle" aria-hidden="true"></span><span class="sparkle" aria-hidden="true"></span>
+    <span class="sparkle" aria-hidden="true"></span><span class="sparkle" aria-hidden="true"></span>
+    <span class="sparkle" aria-hidden="true"></span><span class="sparkle" aria-hidden="true"></span>
+
+    <div class="wrap reveal">
+      <img class="hero-logo" src="/img/logo.svg" alt="" width="150" height="175">
+      <p class="eyebrow">The official community awards</p>
+      <h1>Rabbit Rabbi <span class="line2">Awards</span></h1>
+      <p class="tagline">Eight awards. One crown. Your vote decides who hops into history.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="#ballot" id="vote-cta">Cast your vote</a>
+        <p class="status-chip" id="status-chip" role="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Checking the booth…</span></p>
+      </div>
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee"></div>
+  </div>
+
+  <main id="main">
+    <section aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="how-title">How voting works</h2>
+          <p>No account needed. It takes about a minute.</p>
+        </div>
+        <ol class="steps">
+          <li><strong>Pick your winners</strong><span>Choose one nominee in every category. Tap again on a different nominee to change your mind.</span></li>
+          <li><strong>Review your ballot</strong><span>Look over all eight picks before anything is final.</span></li>
+          <li><strong>Submit once</strong><span>You get one ballot. Results stay secret until the ceremony.</span></li>
+        </ol>
+        <p class="fair-note"><strong>Play fair.</strong> There are no accounts, so no website can truly guarantee one vote per real person. Each browser gets a single-use ballot and we limit repeat attempts, but this event runs on community honor. Please vote once.</p>
+      </div>
+    </section>
+
+    <section class="ballot-shell" id="ballot" aria-labelledby="ballot-title" tabindex="-1">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="ballot-title">Your ballot</h2>
+          <p id="ballot-sub">Choose one nominee in each category.</p>
+        </div>
+        <div id="ballot-root" aria-live="polite" aria-busy="true">
+          <div class="panel">
+            <p>Opening the voting booth…</p>
+            <div class="loading-bar" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="progress-bar" id="progress-bar" hidden>
+    <div class="wrap">
+      <div class="progress-info">
+        <div class="progress-label" id="progress-label">0 of 8 chosen</div>
+        <ul class="dots" id="progress-dots" aria-label="Category progress"></ul>
+      </div>
+      <button class="btn btn-primary" type="button" id="progress-btn">Next category</button>
+    </div>
+  </div>
+
+  <dialog id="review" aria-labelledby="review-title">
+    <div class="dlg-inner">
+      <h2 id="review-title">Review your ballot</h2>
+      <p>Make sure everything looks right. Once you submit, your ballot is final.</p>
+      <ul class="review-list" id="review-list"></ul>
+      <div class="alert" id="review-error" role="alert" hidden></div>
+      <div class="dlg-actions">
+        <button class="btn" type="button" id="review-back">Keep editing</button>
+        <button class="btn btn-primary" type="button" id="review-submit"><span id="submit-label">Submit my ballot</span></button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="brand" href="#top"><img src="/img/logo.svg" alt="" width="34" height="40"><span>Rabbit Rabbi Awards</span></a>
+      <p>Made for the community, by the community.</p>
+      <p><a class="footer-admin" href="/admin">Admin</a></p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js" defer></script>
+</body>
+</html>
