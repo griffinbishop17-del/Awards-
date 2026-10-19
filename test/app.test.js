@@ -64,7 +64,7 @@ async function login(password = TEST_PASSWORD) {
 const admin = (p, opts = {}) => fetch(base + p, { ...opts, headers: { Cookie: adminCookie, 'X-CSRF-Token': csrf, ...J, ...(opts.headers || {}) } });
 
 // ---- 1. Content ----
-test('all 12 categories with the exact nominees (57 placements)', () => {
+test('all 13 categories with the exact nominees (61 placements)', () => {
   const expected = {
     'Most Athletic': ['Griffin', 'Sam', 'Josh', 'Stephen', 'Hawkin'],
     'Best Entrance': ['Sam', 'Hawkin', 'Gage', 'Griffin'],
@@ -77,18 +77,19 @@ test('all 12 categories with the exact nominees (57 placements)', () => {
     'Chad of the Year': ['Quinn', 'Sam', 'Gage', 'Hawkin', 'Morgan'],
     'Tsundere of the Year': ['Griffin', 'Gage', 'Sam', 'Ian'],
     'Crashout of the Year': ['Griffin', 'Gage', 'Sam', 'Ian'],
+    'Duo of the Year': ['Sam & Griffin', 'Stephen & Josh', 'Hawkin & Morgan', 'Ian & Gage'],
     'Rabbit Rabbi of the Year': ['Gage', 'Griffin', 'Ian'],
   };
-  assert.equal(CATEGORIES.length, 12);
+  assert.equal(CATEGORIES.length, 13);
   assert.deepEqual(Object.fromEntries(CATEGORIES.map((c) => [c.name, c.nominees.map((n) => n.name)])), expected);
-  assert.equal(CATEGORIES.reduce((s, c) => s + c.nominees.length, 0), 57);
+  assert.equal(CATEGORIES.reduce((s, c) => s + c.nominees.length, 0), 61);
 });
 
 test('public ballot endpoint exposes categories, never counts, and sets an HttpOnly token cookie', async () => {
   const v = await newVoter();
   assert.equal(v.body.open, true);
   assert.equal(v.body.ballot, 'ready');
-  assert.equal(v.body.categories.length, 12);
+  assert.equal(v.body.categories.length, 13);
   assert.ok(!/votes|percent|leader|total/i.test(JSON.stringify(v.body)));
   const raw = v.res.headers.getSetCookie().find((c) => c.startsWith('rra_ballot='));
   assert.match(raw, /HttpOnly/i);
@@ -244,7 +245,7 @@ test('CSV export contains every nominee with counts and percentages', async () =
   const text = (await res.text()).replace(/^﻿/, '');
   const lines = text.trim().split('\r\n');
   assert.equal(lines[0].split(',')[0], 'Category');
-  assert.equal(lines.length, 1 + 57);
+  assert.equal(lines.length, 1 + 61);
   assert.ok(lines.some((l) => l.startsWith('Most Athletic,Josh,0,0.0%')));
   assert.ok(lines.some((l) => l.startsWith('Most Athletic,Griffin,') && l.includes('Tied for lead')));
   assert.ok(lines.some((l) => l.startsWith('Most Athletic,Sam,') && l.includes('Tied for lead')));

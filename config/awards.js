@@ -24,6 +24,11 @@ const people = {
   ian: { name: 'Ian' },
   quinn: { name: 'Quinn' },
   morgan: { name: 'Morgan' },
+  // Duo of the Year nominees (each pair is one nominee)
+  'sam-griffin': { name: 'Sam & Griffin' },
+  'stephen-josh': { name: 'Stephen & Josh' },
+  'hawkin-morgan': { name: 'Hawkin & Morgan' },
+  'ian-gage': { name: 'Ian & Gage' },
 };
 
 const categories = [
@@ -92,6 +97,12 @@ const categories = [
     name: 'Crashout of the Year',
     blurb: 'The meltdown heard around the group chat.',
     nominees: ['griffin', 'gage', 'sam', 'ian'],
+  },
+  {
+    id: 'duo-of-the-year',
+    name: 'Duo of the Year',
+    blurb: 'Better together. Or at least louder.',
+    nominees: ['sam-griffin', 'stephen-josh', 'hawkin-morgan', 'ian-gage'],
   },
   {
     id: 'rabbit-rabbi-of-the-year',
