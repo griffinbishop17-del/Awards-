@@ -79,7 +79,7 @@ Take a backup right before closing voting and keep the file somewhere safe. Neon
 
 - **Single-use ballot tokens.** Each browser gets a random token in an HttpOnly cookie; only its SHA-256 hash is stored. Submitting checks "voting open", consumes the token and writes the ballot in **one database transaction**, so double-clicks, retries and parallel requests create at most one ballot. The "open?" check takes a row lock that closing voting also needs, so no ballot can be saved after the admin closes voting.
 - **Reopening voting** never revives a used token and never touches saved ballots.
-- Every ballot is **validated on the server** (all 8 categories, each nominee must belong to its category).
+- Every ballot is **validated on the server** (all 10 categories, each nominee must belong to its category).
 - **Rate limiting** on ballot submission, on new-token issuance, and on login (5 wrong passwords locks that address out for 15 minutes).
 - **No IP addresses are stored.** Addresses are used only in memory for rate limits.
 - **Admin:** scrypt password check, random 8-hour session cookie (`HttpOnly`, `SameSite=Strict`, `Secure` in production, stored hashed), CSRF token on every write, same-origin checks, strict Content-Security-Policy. Every admin API route is protected, and the dashboard page and script are only served to a signed-in admin.

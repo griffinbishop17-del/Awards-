@@ -70,6 +70,18 @@ const categories = [
     nominees: ['sam', 'gage', 'ian', 'griffin', 'hawkin'],
   },
   {
+    id: 'bum-of-the-year',
+    name: 'Bum of the Year',
+    blurb: 'Zero plans, zero shame, maximum couch.',
+    nominees: ['quinn', 'sam', 'gage', 'hawkin', 'morgan'],
+  },
+  {
+    id: 'chad-of-the-year',
+    name: 'Chad of the Year',
+    blurb: 'Confidence level: off the charts.',
+    nominees: ['quinn', 'sam', 'gage', 'hawkin', 'morgan'],
+  },
+  {
     id: 'rabbit-rabbi-of-the-year',
     name: 'Rabbit Rabbi of the Year',
     blurb: 'The big one. The one everyone came for.',
