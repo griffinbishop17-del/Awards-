@@ -82,6 +82,18 @@ const categories = [
     nominees: ['quinn', 'sam', 'gage', 'hawkin', 'morgan'],
   },
   {
+    id: 'tsundere-of-the-year',
+    name: 'Tsundere of the Year',
+    blurb: "Acts like they don't care. Absolutely cares.",
+    nominees: ['griffin', 'gage', 'sam', 'ian'],
+  },
+  {
+    id: 'crashout-of-the-year',
+    name: 'Crashout of the Year',
+    blurb: 'The meltdown heard around the group chat.',
+    nominees: ['griffin', 'gage', 'sam', 'ian'],
+  },
+  {
     id: 'rabbit-rabbi-of-the-year',
     name: 'Rabbit Rabbi of the Year',
     blurb: 'The big one. The one everyone came for.',
